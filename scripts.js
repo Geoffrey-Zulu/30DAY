@@ -45,6 +45,9 @@ grab()
 
 
 switch(day){
+  case 5: 
+  document.getElementById("2day").innerHTML = days[0]
+  break;
   case 6: 
     document.getElementById("2day").innerHTML = days[0]
     break;

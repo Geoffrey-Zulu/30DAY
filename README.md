@@ -1,2 +1,1 @@
-# 30DAY
- challange
+Emmanuel Keyafu

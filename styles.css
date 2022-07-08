@@ -155,6 +155,9 @@ padding: 0;
 }
     }
     @media screen and (max-width: 612px) {
+      h4{
+        font-size: 30px;
+      }
       .day{
         display: grid;
         padding: 0;
@@ -162,5 +165,36 @@ padding: 0;
       .hours h4{
         display: block;
         font-size: 30px;
+      }
+    }
+    @media screen and (max-width: 591px) {
+
+      .hours h4{
+        font-size: 25px;
+      }
+    }
+
+    @media screen and (max-width: 572px) {
+      .days{
+        grid-template-columns: auto auto auto;
+      }
+      .theme button{
+        height: 30px;
+        width: 30px;
+      }
+      h4{
+        font-size: 20px;
+      }
+    }
+    @media screen and (max-width: 489px) {
+      h4{
+        font-size: 20px;
+      }
+      .theme button{
+        height: 30px;
+        width: 30px;
+      }
+      .hours h4{
+        font-size: 20px;
       }
     }

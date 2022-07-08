@@ -1,5 +1,6 @@
 const date = new Date();
 let day = date.getDate();
+let time = date.getHours();
 let repeater;
 switch(day){
 case 8:

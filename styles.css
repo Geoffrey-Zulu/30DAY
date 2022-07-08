@@ -1,15 +1,39 @@
 :root{
   --background:rgba(73, 69, 69, 0.74);
+  --border1:rgba(73, 69, 69, 0.74);
   --border:rgb(0, 204, 255);
-  --items:rgba(119, 247, 119, 0.856);
+  --white: white;
+  --grayscale: grayscale(100%);
+  --black: white;
+  --text: black;
+  --important:rgb(204, 22, 22);
+  --important2:rgb(180, 192, 68);
+
   padding: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.light-mode{ 
+transition:all 1s ease-in-out;
+--background: black;
+--border1:rgb(0, 204, 255);
+--white: rgb(43, 104, 128);
+--black: black;
+--grayscale: rgba(111, 43, 128, 0.219);
+--text: white;
+--important:rgb(0, 204, 255);
+--important2:rgb(0, 204, 255);
+}
+
 body{
- border: 3px solid var(--background);
+ transition:all 1s ease-in-out;
+ transition:all 1s ease-in-out;
+ background-color: var(--black);
+ border: 3px solid var(--border1);
  margin: 15px;
  padding: 20px;
 }
+
 h4{
   display: flex;
   align-items: center;
@@ -17,6 +41,7 @@ h4{
   font-size: 2rem;
   font-weight: 50%;
 }
+
 .days{
   padding: 10px;
   display: flex;
@@ -25,24 +50,28 @@ h4{
   flex-wrap: wrap;
   height: 100%;
 }
+
 .day{
+  transition:all 1s ease-in-out;
   display: flex;
   background-color: var(--background);
   height: 100px;
   width: 100px;
   padding: 5px;
-  border: 15px solid white;
+  border: 15px solid var(--white);
   align-items: center;
   justify-content: center;
   font-size: 3rem;
   color: var(--border);
 }
+
 .day:hover{
 transition: all 1s ease-in-out;
 transform: translateY(-10px);
 background-color:var(--border);
 color:black;
 }
+
 .hours{
   display: flex;
   align-items: center;
@@ -56,18 +85,45 @@ color:black;
 }
 
 .hours span{
-  color: rgb(204, 22, 22);
+  color: var(--important);
+}
+h4{
+color: var(--text);
 }
 h4 span{
-  color: rgb(204, 22, 22);
+  transition:all 1s ease-in-out;
+  color: var(--important);
 }
+
 #passed{
-  filter: grayscale(100%);
+  filter: var(--grayscale);
   cursor: pointer;
+  background-color: var(--background);
+  color:rgb(161, 163, 165);
 }
+
 #passed:hover {
   transition: none;
   transform: none;
   background-color: var(--background);
-  color:rgb(161, 163, 165)
+  color:rgb(161, 163, 165);
+}
+
+.theme{
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  right: 50px;
+  width:20%;
+}
+.theme button{
+  transition:all 1s ease-in-out;
+  height: 40px;
+  width: 40px;
+  color:var(--text);
+  background-color: var(--important2);
+  border-radius: 50%;
+  border: 4px solid black;
 }

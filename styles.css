@@ -129,8 +129,38 @@ h4 span{
 }
 
 /* responsive */
-@media screen and (max-width: 992px) {
-  body {
-    background-color: blue;
-  }
+@media screen and (max-width: 812px) {
+body{
+  padding: 0;
 }
+.theme{
+top: 25px;
+right: 25px;
+}
+}
+@media screen and (max-width: 772px) {
+
+  .days{
+padding: 0;
+  }
+  }
+  @media screen and (max-width: 752px) {
+.days{
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.day{
+  display: grid;
+}
+    }
+    @media screen and (max-width: 612px) {
+      .day{
+        display: grid;
+        padding: 0;
+      }
+      .hours h4{
+        display: block;
+        font-size: 30px;
+      }
+    }
